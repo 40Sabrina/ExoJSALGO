@@ -13,6 +13,7 @@
 const multiplication = (a, b) => {
     return (a * b);
 }
+console.log("EXO1")
 console.log(multiplication(2, 3));
 
 
@@ -25,12 +26,14 @@ console.log(multiplication(2, 3));
 // const monTableau = [1, 2, 3]
 // console.log(monTableau[0]) // 1
 
-const monTableau = [1, 2, 3];
+const monTableau2 = [1, 2, 3];
 
 const returnTableau = () => {
-    return (monTableau[0]);
+
+    return (monTableau2[0]);
 }
-console.log(returnTableau(monTableau));
+console.log("Exo2")
+console.log(returnTableau(monTableau2));
 
 
 
@@ -44,13 +47,15 @@ console.log(returnTableau(monTableau));
 // monTableau.pop()
 // console.log(monTableau) // [1, 2]
 
-const Tableau = [1, 2, 3];
+const monTableau3 = [1, 2, 3];
 
-const monTableau2 = () => {
-    Tableau.pop();
-    return (Tableau);
+const Tableau = () => {
+
+    monTableau3.pop();
+    return (monTableau3);
 }
-console.log(monTableau2(Tableau));
+console.log("EXO3")
+console.log(Tableau(monTableau3));
 
 //----------------------------------------------------------------------------------------------//
 // EXERCICE 4
@@ -65,13 +70,15 @@ console.log(monTableau2(Tableau));
 
 const monTableau4 = [1, 2, 3];
 
-const addition = (monTableau4) => {
+const addition = () => {
+
     let sun = 0
     for (let i = 0; i < monTableau4.length; i++) {
         sun += monTableau4[i];
     }
     return (sun);
 }
+console.log("EXO4")
 console.log(addition(monTableau4));
 //----------------------------------------------------------------------------------------------//
 
@@ -86,8 +93,15 @@ console.log(addition(monTableau4));
 // console.log(monTableauInverse) // ["o", "l", "l", "e", "H"]
 //Maintenant que la string est inversée il faut la remettre en string avec la méthode join().
 
-// CODE ICI
 
+const stringInverse = () => {
+    const maString = "!ogla'l sap emia 'n eJ"
+    const monTableau = maString.split("");
+    const monTableauInverse = monTableau.reverse();
+    return (monTableauInverse.join(""));
+}
+console.log("EXO5")
+console.log(stringInverse());
 //----------------------------------------------------------------------------------------------//
 
 // EXERCICE 6
@@ -97,7 +111,15 @@ console.log(addition(monTableau4));
 // const monTableau = [1, 2, 3]
 // console.log(Math.max(...monTableau)) // 3
 
-// CODE ICI
+const monTableau6 = [1, 2, 3]
+
+const maxTableau = () => {
+    return (Math.max(...monTableau6))
+}
+
+console.log("EXO6")
+console.log(maxTableau())
+
 
 //----------------------------------------------------------------------------------------------//
 
