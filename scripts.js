@@ -263,6 +263,7 @@ const TableaufirstLetter = () => {
         return (element.charAt(0))
     })
     console.log("EXO13")
+    console.log(TableauPremiereLettre)
     console.log(TableauPremiereLettre.join("")) //petit plus pour la lecture :-)
 }
 TableaufirstLetter()
@@ -281,6 +282,7 @@ const TableauEndLetter = () => {
         return (element.charAt(2))
     })
     console.log("EXO14")
+    console.log(MaDerniereLettre)
     console.log(MaDerniereLettre.join("")) //petit plus
 }
 TableauEndLetter()
@@ -293,11 +295,12 @@ TableauEndLetter()
 // Pour cette exercice on va utiliser la méthode filter() qui permet de filtrer un tableau, hésitez pas à regarder l'exercice 8 pour voir comment ça fonctionne. Sauf qu'ici on va filtrer en fonction de la longueur de la string. Incice : la méthode length() permet de récupérer la longueur d'une string.
 
 const TableauStringSup5 = () => {
-    const monTableau = ["Sac à", "do", " papier,", "ré", "mi", "l'EXO5", "fa", "sol", " est ICI", "la", "si", "do"]
+    const monTableau = ["Sac à", "do", " papier,", "ré", "mi", "l'EX15", "fa", "sol", " est ICI", "la", "si", "do"]
     const TableauMotSup5 = monTableau.filter((element) => {
         return (element.length >= 5)
     });
     console.log("EX15")
+    console.log(TableauMotSup5)
     console.log(TableauMotSup5.join("")); //petit plus
 };
 TableauStringSup5()
@@ -341,6 +344,7 @@ const TwoInOneTableau = () => {
     const monTableau2 = [" Demain,", " il y a", " école!"]
     let FusionTableau = monTableau1.concat(monTableau2)
     console.log("EXO17")
+    console.log(FusionTableau)
     console.log(FusionTableau.join("")) //petit plus
 }
 TwoInOneTableau()
