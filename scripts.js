@@ -375,7 +375,17 @@ TableauStringE()
 // Exemple : [ 2, 9, 6, 5, 6] => [2, 6, 6]
 // Indice : il y a plusieurs façon de faire, soit avec un for, soit avec la méthode filter() une fois ça fait utilise la méthode sort() qui permet de trier un tableau.
 
-// CODE ICI
+const NumbersPairs = () => {
+    const monTableau = [1, 8, 3, 8, 6, 5, 4]
+    let tableauPairs = monTableau.filter((element) => {
+        monTableau.sort();
+        return (element % 2 == 0)
+    })
+    console.log("EX19")
+    console.log(tableauPairs);
+}
+NumbersPairs()
+
 
 //----------------------------------------------------------------------------------------------//
 
