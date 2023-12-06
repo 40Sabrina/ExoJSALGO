@@ -191,7 +191,7 @@ TableauTrie()
 // console.log(monTableau) // ["Hello", "elloH", "lloHe", "loHel", "oHell"]
 
 const stringRotation = () => {
-    const maString = "Hello"
+    const maString = "Pourquoi?"
     const monTableau = []
     for (let i = 0; i < maString.length; i++) {
         const maStringRotate = maString.substring(i) + maString.substring(0, i)
@@ -213,8 +213,15 @@ console.log(stringRotation());
 //   return element + 1
 // })
 
-// CODE ICI
-
+const mapTableau = () => {
+    const monTableau = [1, 2, 3, 4, 5]
+    let monTableauAdd = monTableau.map((element) => {
+        return (element += 1)
+    })
+    console.log("EXO11")
+    console.log(monTableauAdd)
+}
+mapTableau()
 //----------------------------------------------------------------------------------------------//
 
 // EXERCICE 12
@@ -227,8 +234,15 @@ console.log(stringRotation());
 //   return element.length
 // })
 
-// CODE ICI
-
+const TableauString = () => {
+    const monTableau = ["pffff", "et", "encore", "pff"]
+    const monTableauLongueur = monTableau.map((element) => {
+        return (element.length)
+    })
+    console.log("EXO11")
+    console.log(monTableauLongueur)
+}
+TableauString()
 //----------------------------------------------------------------------------------------------//
 
 // EXERCICE 13
@@ -242,8 +256,16 @@ console.log(stringRotation());
 //   return element.charAt(0)
 // })
 
-// CODE ICI
-
+const TableaufirstLetter = () => {
+    let monTableau = ["Eff", "Nff", "Cve", "Ovr", "Rre", "Eze", " er", "Eve", "Tfv", " rt", "Tve", "Ove", "Ueu", "Jej", "Oeo", "Ufv", "Rvr",
+        "Ses", " rd", "Def", "Eve", " fe", "Lfe", "'ve", "Ave", "Ldl", "Geg", "Odo", "!df"]
+    const TableauPremiereLettre = monTableau.map((element) => {
+        return (element.charAt(0))
+    })
+    console.log("EXO13")
+    console.log(TableauPremiereLettre.join("")) //petit plus pour la lecture :-)
+}
+TableaufirstLetter()
 //----------------------------------------------------------------------------------------------//
 
 // EXERCICE 14
@@ -253,8 +275,15 @@ console.log(stringRotation());
 // Indice regarde l'exercice 13, c'est exactement la même chose sauf qu'il faut récupérer la dernière lettre et non la première.
 
 
-// CODE ICI
-
+const TableauEndLetter = () => {
+    let monTableau = ["fec", "fe'", "fee", "fes", "fet", "fe ", "feb", "fei", "fee", "fen", "fet", "feô", "fet", "fe ", "fef", "fei", "fen", "fei", "fe?"]
+    const MaDerniereLettre = monTableau.map((element) => {
+        return (element.charAt(2))
+    })
+    console.log("EXO14")
+    console.log(MaDerniereLettre.join("")) //petit plus
+}
+TableauEndLetter()
 //----------------------------------------------------------------------------------------------//
 
 // EXERCICE 15
