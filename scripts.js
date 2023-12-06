@@ -336,7 +336,14 @@ TableauAddition()
 // const monTableauConcat = monTableau1.concat(monTableau2)
 // console.log(monTableauConcat) // ["Hello", "World", "Test", "Salut"]
 
-// CODE ICI
+const TwoInOneTableau = () => {
+    const monTableau1 = ["Il", " faut", " que", " je m'arrête."]
+    const monTableau2 = [" Demain,", " il y a", " école!"]
+    let FusionTableau = monTableau1.concat(monTableau2)
+    console.log("EXO17")
+    console.log(FusionTableau.join("")) //petit plus
+}
+TwoInOneTableau()
 
 //----------------------------------------------------------------------------------------------//
 
