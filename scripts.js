@@ -292,7 +292,15 @@ TableauEndLetter()
 // Exemple : ["Hello", "World","Test", "Salut", "Yo"] => ["Hello", "World", "Salut"]
 // Pour cette exercice on va utiliser la méthode filter() qui permet de filtrer un tableau, hésitez pas à regarder l'exercice 8 pour voir comment ça fonctionne. Sauf qu'ici on va filtrer en fonction de la longueur de la string. Incice : la méthode length() permet de récupérer la longueur d'une string.
 
-// CODE ICI
+const TableauStringSup5 = () => {
+    const monTableau = ["Sac à", "do", " papier,", "ré", "mi", "l'EXO5", "fa", "sol", " est ICI", "la", "si", "do"]
+    const TableauMotSup5 = monTableau.filter((element) => {
+        return (element.length >= 5)
+    });
+    console.log("EX15")
+    console.log(TableauMotSup5.join("")); //petit plus
+};
+TableauStringSup5()
 
 //----------------------------------------------------------------------------------------------//
 
