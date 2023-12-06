@@ -314,7 +314,15 @@ TableauStringSup5()
 //   return accumulateur + element
 // }, 0)
 
-// CODE ICI
+const TableauAddition = () => {
+    const monTableau = [1, 2, 3, 4, 5]
+    let TableauReduce = monTableau.reduce((accumulateur, element) => {
+        return (accumulateur + element)
+    })
+    console.log("EXO16")
+    console.log(TableauReduce)
+}
+TableauAddition()
 
 //----------------------------------------------------------------------------------------------//
 
