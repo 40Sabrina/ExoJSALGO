@@ -357,8 +357,16 @@ TwoInOneTableau()
 // Exemple : ["Poulet", "Chat", "Chien", "Cheval"] => ["Poulet", "Chien", "Cheval"]
 // Pour cette exercice on va utiliser la méthode filter() qui permet de filtrer un tableau, hésitez pas à regarder l'exercice 8 pour voir comment ça fonctionne. Sauf qu'ici on va filtrer en fonction de la présence de la lettre "e". Indice : la méthode includes() permet de savoir si une string contient une lettre ou un mot.
 
-// CODE ICI
-
+const TableauStringE = () => {
+    const monTableau = ["MaisEuh", "Je", "mfhs", " veux", "jfkdq", " faire", "knvjds", " dodoeuh"]
+    let TableauE = monTableau.filter((element) => {
+        return element.includes("e")
+    })
+    console.log("EXO18")
+    console.log(TableauE)
+    console.log(TableauE.join("")) //petit plus
+}
+TableauStringE()
 //----------------------------------------------------------------------------------------------//
 
 // EXERCICE 19
