@@ -26,14 +26,12 @@ console.log(multiplication(2, 3));
 // const monTableau = [1, 2, 3]
 // console.log(monTableau[0]) // 1
 
-const monTableau2 = [1, 2, 3];
-
 const returnTableau = () => {
-
-    return (monTableau2[0]);
+    const monTableau = [1, 2, 3];
+    return (monTableau[0]);
 }
 console.log("Exo2")
-console.log(returnTableau(monTableau2));
+console.log(returnTableau());
 
 
 
@@ -47,15 +45,13 @@ console.log(returnTableau(monTableau2));
 // monTableau.pop()
 // console.log(monTableau) // [1, 2]
 
-const monTableau3 = [1, 2, 3];
-
-const Tableau = () => {
-
-    monTableau3.pop();
-    return (monTableau3);
+const TableauSup = () => {
+    const monTableau = [1, 2, 3];
+    monTableau.pop();
+    return (monTableau)
 }
 console.log("EXO3")
-console.log(Tableau(monTableau3));
+console.log(TableauSup());
 
 //----------------------------------------------------------------------------------------------//
 // EXERCICE 4
@@ -68,18 +64,18 @@ console.log(Tableau(monTableau3));
 //   console.log(monTableau) // 1, 2, 3
 // }
 
-const monTableau4 = [1, 2, 3];
+
 
 const addition = () => {
-
+    const monTableau = [1, 2, 3];
     let sun = 0
-    for (let i = 0; i < monTableau4.length; i++) {
-        sun += monTableau4[i];
+    for (let i = 0; i < monTableau.length; i++) {
+        sun += monTableau[i];
     }
-    return (sun);
+    return sun
 }
 console.log("EXO4")
-console.log(addition(monTableau4));
+console.log(addition());
 //----------------------------------------------------------------------------------------------//
 
 // EXERCICE 5
@@ -96,9 +92,9 @@ console.log(addition(monTableau4));
 
 const stringInverse = () => {
     const maString = "!ogla'l sap emia 'n eJ"
-    const monTableau = maString.split("");
-    const monTableauInverse = monTableau.reverse();
-    return (monTableauInverse.join(""));
+    let maStringEnTableau = maString.split("");
+    maStringEnTableau = maStringEnTableau.reverse();
+    return maStringEnTableau.join("")
 }
 console.log("EXO5")
 console.log(stringInverse());
@@ -111,10 +107,9 @@ console.log(stringInverse());
 // const monTableau = [1, 2, 3]
 // console.log(Math.max(...monTableau)) // 3
 
-const monTableau6 = [1, 2, 3]
-
 const maxTableau = () => {
-    return (Math.max(...monTableau6))
+    const monTableau = [1, 2, 3];
+    return Math.max(...monTableau)
 }
 
 console.log("EXO6")
@@ -130,8 +125,14 @@ console.log(maxTableau())
 // const monTableau = [1, 2, 3]
 // console.log(Math.min(...monTableau)) // 1
 
-// CODE ICI
 
+const minTableau = () => {
+    const monTableau = [1, 2, 3];
+    console.log("EXO7")
+    console.log(Math.min(...monTableau))
+}
+
+minTableau()
 //----------------------------------------------------------------------------------------------//
 
 // EXERCICE 8
@@ -146,8 +147,16 @@ console.log(maxTableau())
 //   return element !== "e" && element !== "o"
 // })
 
-// CODE ICI
-
+const maStringFilter = (string) => {
+    const maString = "Hello";
+    let MaStringEnTableau = maString.split("");
+    MaStringEnTableau = MaStringEnTableau.filter((element) => {
+        return (element !== "e" && element !== "o");
+    });
+    console.log("EXO8")
+    console.log(MaStringEnTableau.join(""));
+};
+maStringFilter()
 //----------------------------------------------------------------------------------------------//
 
 // EXERCICE 9
@@ -158,8 +167,14 @@ console.log(maxTableau())
 // const monTableau = [1, 3, 2]
 // console.log(monTableau.sort()) // [1, 2, 3]
 
-// CODE ICI
+const TableauTrie = () => {
+    const monTableau = [5, 9, 4, 2]
+    console.log("EXO9")
+    console.log(monTableau.sort())
+    return (monTableau)
 
+}
+TableauTrie()
 //----------------------------------------------------------------------------------------------//
 
 // EXERCICE 10
@@ -175,8 +190,17 @@ console.log(maxTableau())
 // }
 // console.log(monTableau) // ["Hello", "elloH", "lloHe", "loHel", "oHell"]
 
-// CODE ICI
-
+const stringRotation = () => {
+    const maString = "Hello"
+    const monTableau = []
+    for (let i = 0; i < maString.length; i++) {
+        const maStringRotate = maString.substring(i) + maString.substring(0, i)
+        monTableau.push(maStringRotate)
+    }
+    return (monTableau)
+}
+console.log("EXO10")
+console.log(stringRotation());
 //----------------------------------------------------------------------------------------------//
 
 // EXERCICE 11
