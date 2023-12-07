@@ -415,11 +415,22 @@ NumbersPairs()
 
 
 
+const StringCourt = () => {
+    const maString = "Aïe, ça va piquer"
+    let monTableau = maString.split(" ")
+    let MaStringLongueur = monTableau.map((element) => {
+        return element.length
+    })
+    let tableauTri = MaStringLongueur.sort((a, b) => {
+        return a - b
+    })
+    console.log("EXO20")
+    console.log(MaStringCourt[0])
+    return tableauTri[0]
+}
 
 
-// CODE ICI
-
-
+StringCourt()
 
 
 
