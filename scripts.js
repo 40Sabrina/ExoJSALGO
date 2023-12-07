@@ -425,7 +425,7 @@ const StringCourt = () => {
         return a - b
     })
     console.log("EXO20")
-    console.log(MaStringCourt[0])
+    console.log(MaStringLongueur[0])
     return tableauTri[0]
 }
 
@@ -469,9 +469,22 @@ StringCourt()
 // Indice : Oubliez pas de transformer les string en tableau pour pouvoir les trier et les comparer. Utilisez la méthode split() pour transformer une string en tableau et la méthode sort() pour trier un tableau. Puis comparez les deux tableaux avec la méthode join() qui permet de transformer un tableau en string.
 
 
-// CODE ICI
+const AnagramBooléen = () => {
+    const string1 = "bonjour"
+    const string2 = "jourbon"
+    let Tableau1 = string1.split("")
+    let Tableau2 = string2.split("")
+    let Tableau1Tri = Tableau1.sort()
+    let Tableau2Tri = Tableau2.sort()
+    if (Tableau1Tri.join("") === Tableau2Tri.join("")) {
+        return true
+    } else {
+        return false
+    }
 
-
+}
+console.log("EXO21")
+console.log(AnagramBooléen())
 
 
 
