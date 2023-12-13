@@ -526,8 +526,17 @@ console.log(AnagramBooléen())
 
 // CODE ICI
 
+const EnleverDoubleString = () => {
+    const string = "google";
+    let tableauString = string.split("");
+    let tableauFiltreString = tableauString.filter((element, index) => {
+    return element != tableauString[index + 1]
+})
+return tableauFiltreString.join("")
+}
 
-
+console.log("EXO22")
+console.log(EnleverDoubleString())
 
 
 
@@ -571,9 +580,16 @@ console.log(AnagramBooléen())
 
 // CODE ICI
 
+const numberPhone = () => {
+    const tableauNumber = [1,2,3,4,5,6,7,8,9,0]
+    let DecoupeTableau1 = tableauNumber.slice(0, 3)
+    let DecoupeTableau2 = tableauNumber.slice(3, 6)
+    let DecoupeTableau3 = tableauNumber.slice(6, 10)
+return `(${DecoupeTableau1.join("")}) ${DecoupeTableau2.join("")} - ${DecoupeTableau3.join("")}`
+}
 
-
-
+console.log ("EXO23")
+console.log (numberPhone())
 
 //----------------------------------------------------------------------------------------------//
 //----------------------------------------------------------------------------------------------//
@@ -676,3 +692,272 @@ console.log(AnagramBooléen())
 
 // console.log(sortString(["Banana", "Orange", "Apple", "Mango"]))
 
+
+// EXERCICE 26
+// Écris une fonction qui étant donné deux angles d'un triangle renvoie la mesure du troisième angle.
+// ( Rappel : la somme des trois angles d'un triangle est toujours égale à 180 degrés )
+// Exemple :
+// otherAngle(30, 60) // 90
+// otherAngle(60, 60) // 60
+// Indice : Pour trouver le troisième angle, tu dois soustraire la somme des deux angles donnés à 180 degrés.
+
+const thirdAngle = (a, b) => {
+    const somme2angles = (a + b)
+    const TroisiemeAngle = (180 - somme2angles)
+    return (TroisiemeAngle);
+  }
+  console.log("EX026")
+  console.log(thirdAngle(90, 30));
+
+//----------------------------------------------------------------------------------------------//
+
+// EXERCICE 27
+// Écris une fonction qui peut déterminer si une année est une année bissextile ou non. Elle doit renvoyer true si c'est le cas, sinon false.
+// ( Rappel : Une année bissextile est une année contenant 366 jours au lieu de 365. Elle est donc plus longue qu'une année normale. Une année bissextile a lieu tous les 4 ans. )
+// Exemple :
+// isLeapYear(2020) // true
+// isLeapYear(2021) // false
+// Indice : Pour savoir ça tu peux utiliser le modulo. Si une année est divisible par 4 et que le reste de la division est égal à 0, alors c'est une année bissextile.
+
+function isLeapYear(year) {
+    if (year % 4 === 0) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+  console.log("EXO27")
+  console.log(isLeapYear(2004))
+  console.log(isLeapYear(2016))
+  console.log(isLeapYear(2020))
+  console.log(isLeapYear(2021))
+  
+
+//----------------------------------------------------------------------------------------------//
+
+// EXERCICE 28
+
+// Voici un example de tableau d'animaux. Écris une fonction qui à partir d'un tableau similaire reçu en paramètre renvoie un nouveau tableau qui lui même contient deux sous-tableaux. Le premier sous-tableau doit contenir les animaux domestiques et le second les animaux sauvages. Les animaux domestiques doivent être triés par ordre alphabétique et les animaux sauvages par ordre alphabétique inversé.
+
+const animals = [
+    { name: "Panda", type: "Wild" },
+    { name: "Cat", type: "Domestic" },
+    { name: "Turtle", type: "Domestic" },
+    { name: "Dog", type: "Domestic" },
+    { name: "Crocodile", type: "Wild" },
+    { name: "Eagle", type: "Wild" },
+    { name: "Donkey", type: "Domestic" },
+    { name: "Pigeon", type: "Domestic" },
+    { name: "Monkey", type: "Wild" }
+  ]
+  
+  // Exemple :
+  // sortAnimals(animals) // [["Cat", "Dog", "Donkey", "Pigeon", "Turtle"], ["Eagle", "Monkey", "Panda", "Crocodile"]]
+  // Indice : Oubliez pas que tu peux créer des variables qui contiennent des tableaux vides et que tu peux ajouter des éléments à un tableau avec la méthode push(). Mais vu que tu dois analyser le tableau d'animaux pour le trier, tu dois utiliser une boucle et faire des conditions if pour savoir si l'animal est domestique ou sauvage. Et tu dois trier les animaux domestiques par ordre alphabétique et les animaux sauvages par ordre alphabétique inversé. Pour trier un tableau par ordre alphabétique tu peux utiliser la méthode sort(). Pour trier un tableau par ordre alphabétique inversé tu peux utiliser la méthode reverse().
+  
+  const TriAnimaux = (animals) => {
+    let AnimauxDomestiques = []
+    let AnimauxSauvages = []
+    let TableauFinal = []
+    for (let i = 0; i < animals.length; i++) {
+      if (animals[i].type === "Domestic") {
+        AnimauxDomestiques.push(animals[i].name)
+      } else if (animals[i].type === "Wild") {
+        AnimauxSauvages.push(animals[i].name)
+      }
+    }
+AnimauxDomestiques.sort()
+AnimauxSauvages.sort()
+AnimauxSauvages.reverse()
+TableauFinal.push(AnimauxDomestiques)
+TableauFinal.push(AnimauxSauvages)
+return TableauFinal
+  }
+  console.log ("EXO28")
+  console.log(TriAnimaux(animals))
+  
+  
+  
+  
+  
+  //-----------------------------------------------SOLUTIONS-----------------------------------------------//
+  
+  // const sortAnimals = (animals) => {
+  //     let tableauDomestic = []
+  //     let tableauWild = []
+  //     let tableauFinal = []
+  //     for (let i = 0; i < animals.length; i++) {
+  //         if (animals[i].type === "Domestic") {
+  //         tableauDomestic.push(animals[i].name)
+  //         } else {
+  //         tableauWild.push(animals[i].name)
+  //         }
+  //     }
+  //     tableauDomestic.sort()
+  //     tableauWild.sort()
+  //     tableauWild.reverse()
+  //     tableauFinal.push(tableauDomestic)
+  //     tableauFinal.push(tableauWild)
+  //     return tableauFinal
+  //     }
+  
+  // console.log(sortAnimals(animals))
+  
+  //----------------------------------------------------------------------------------------------//
+  
+  
+  
+  
+  // EXERCICE 29
+  
+  // Un employé de théatre souhaite obtenir la liste de tous les sièges de sa salle principal. Dans la salle les places sont réparties comme suit : 
+  // - Il y a 26 colonnes de sièges, numérotées de "1" à "26".
+  // - Chaque colonne contient 100 sièges, numérotés de "1" à "100".
+  
+  // Complète la function theatreSieges() qui doit renvoyer un tableau où chaque sous-tableau répertorie les positions des siègnes dans une rangée. 
+  // Exemple  du résultat attendu :
+  // [
+      // ["1-1", "1-2", "1-3", ..., "1-99", "1-100"],
+      // ["2-1", "2-2", "2-3", ..., "2-99", "2-100"],
+      // ["3-1", "3-2", "3-3", ..., "3-99", "3-100"],
+      // ...
+      // ["26-1", "26-2", "26-3", ..., "26-99", "26-100"]
+  // ]
+  
+  // Indice : Tu dois utiliser deux boucles imbriquées pour créer les sous-tableaux. La première boucle doit parcourir les colonnes et la seconde boucle doit parcourir les sièges de chaque colonne. 
+  
+  // CODE ICI
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  //-----------------------------------------------SOLUTIONS-----------------------------------------------//
+  
+  // const theatreSieges = () => {
+  //     let tableau = []
+  //     for (let i = 1; i <= 26; i++) {
+  //         let tableau2 = []
+  //         for (let j = 1; j <= 100; j++) {
+  //             tableau2.push(`${i}-${j}`)
+  //         }
+  //         tableau.push(tableau2)
+  //     }
+  //     return tableau
+  // }
+  
+  // console.log(theatreSieges())
+  
+  //----------------------------------------------------------------------------------------------//
+  
+  // EXERCICE 30
+  
+  /*
+  Notre équipe de football participe à un tournoi dans lequel elle a joué 10 matchs.
+  Les résultats du match sont notés "3:0" : le premier chiffre est le nombre de buts de **notre** équipe ; le second est celui de l'autre équipe.
+  Pour connaître le score de notre équipe, nous suivons ces règles :
+  - Victoire : 3pts
+  - Nul : 1pt
+  - Défaite : 0pt
+  Étant donné un tableau avec les résultats des matchs, écris une fonction qui renverra notre score.
+  Pour exemple, si ta fonction recevait le tableau ci-dessous en paramètre, tu devrais obtenir 13 points.
+  
+  ["1:0", "2:0", "3:0", "4:4", "2:2", "3:3", "1:4", "2:3", "2:4", "3:3"]
+  */
+  //Indice : Tu dois utiliser une boucle for pour parcourir le tableau et une condition if pour savoir si notre équipe a gagné, perdu ou fait match nul. Et tu dois ajouter les points de chaque match à une variable score qui doit être initialisée à 0. Et tu dois retourner la variable score à la fin de la fonction.
+  
+  // CODE ICI
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  //-----------------------------------------------SOLUTIONS-----------------------------------------------//
+  
+  // const footballPoints = (tableau) => {
+  //     let score = 0
+  //     for (let i = 0; i < tableau.length; i++) {
+  //         if (tableau[i][0] > tableau[i][2]) {
+  //             score += 3
+  //         } else if (tableau[i][0] === tableau[i][2]) {
+  //             score += 1
+  //         }
+  //     }
+  //     return score
+  // }
+  // console.log(footballPoints(["1:0", "2:0", "3:0", "4:4", "2:2", "3:3", "1:4", "2:3", "2:4", "3:3"]))
+  
+  //----------------------------------------------------------------------------------------------//
+  
+  
+  // EXERCICE 31
+  
+  /*
+  Écris une fonction avec deux paramètres. Ces paramètres sont des tableaux contenant des nombres **stockés sous forme de chaînes de caractères**.
+  Ta fonction doit renvoyer **un** tableau, où chaque élément est la somme des éléments des deux arguments correspondants (c'est-à-dire : le premier élément du tableau résultat est égal au premier élément du premier paramètre plus le premier élément du deuxième paramètre) .
+  Remarque : Si un élément est vide, il doit compter pour 0.
+  Ex: 
+  sumArr( ["1", "2", "3"], ["2", "4", "1"] ) should return ["3", "6", "4"]
+  sumArr( ["2", "7", "3"], ["2", "4", "9"] ) should return ["4", "11", "12"]
+  sumArr( ["2", "7", "3", "8", "2"], ["2", "4", "9"] ) should return ["4", "11", "12", "8", "2"]
+  sumArr( ["2", "5", "3"], ["2", "4", "9", "5", "5"] ) should return ["4", "9", "12", "5", "5"]
+  */
+  
+  //Indice : Tu dois utiliser une boucle for pour parcourir les tableaux et une condition if pour savoir si un élément est vide. Si un élément est vide tu dois le remplacer par 0. Et tu dois ajouter les éléments des deux tableaux à une variable tableau3 qui doit être initialisée à un tableau vide. Et tu dois retourner le tableau3 à la fin de la fonction.
+  
+  // CODE ICI
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  //-----------------------------------------------SOLUTIONS-----------------------------------------------//
+  
+  // const sumArr = (tableau1, tableau2) => {
+  //     let tableau3 = []
+  //     for (let i = 0; i < tableau1.length; i++) {
+  //         if (tableau1[i] === "") {
+  //             tableau1[i] = 0
+  //         }
+  //         if (tableau2[i] === "") {
+  //             tableau2[i] = 0
+  //         }
+  //         tableau3.push(parseInt(tableau1[i]) + parseInt(tableau2[i]))
+  //     }
+  //     return tableau3
+  // }
+  
+  // console.log(sumArr(["1", "2", "3"], ["2", "4", "1"]))
