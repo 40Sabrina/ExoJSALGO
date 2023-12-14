@@ -624,10 +624,24 @@ console.log (numberPhone())
 
 // CODE ICI
 
+const findMissingLetter = () => {
+const tableauAlpha = ["a","c","d","e"]
+let tableauRecupCode = tableauAlpha.map((element) =>{
+    return element.charCodeAt()
+})
+    for (let i=0; i<tableauRecupCode.length; i++) {
+        if (tableauRecupCode[i] !== tableauRecupCode[i + 1] - 1) {
+           return String.fromCharCode(tableauRecupCode[i] + 1)
+        }
+    }
+}
 
 
 
 
+
+console.log ("EXO24")
+console.log (findMissingLetter())
 
 
 //----------------------------------------------------------------------------------------------//
