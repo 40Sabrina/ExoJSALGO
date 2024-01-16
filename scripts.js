@@ -677,9 +677,22 @@ console.log (findMissingLetter())
 
 // CODE ICI
 
+const string = () => {
+let tableau = ["Banana", "Orange", "Apple", "Mango"]
+sortTableau = tableau.sort((a, b) => {
+    if (a < b) {
+        return -1
+    }
+    if (a > b) {
+        return 1
+    }
+    return 0
+});
+return sortTableau
+}
 
-
-
+console.log("EXO 25");
+console.log(string())
 
 
 //----------------------------------------------------------------------------------------------//
