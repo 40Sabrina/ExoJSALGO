@@ -855,8 +855,20 @@ return TableauFinal
   
   // CODE ICI
   
+  const theatreSieges = () => {
+let tableauFinal = []
+for (let i=1; i <= 26; i++) {
+let colonneSiège = []
+for (let j=1; j <=100; j++) {
+    colonneSiège.push(`${i}-${j}`)
+}
+tableauFinal.push(colonneSiège)
+}
+return tableauFinal
+  }
   
-  
+  console.log("EXO 29")
+  console.log(theatreSieges())
   
   
   
