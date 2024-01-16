@@ -921,8 +921,21 @@ return tableauFinal
   
   // CODE ICI
   
+  const scoreMatch = () => {
+    const resultsMatch = ["1:0", "2:0", "3:0", "4:4", "2:2", "3:3", "1:4", "2:3", "2:4", "3:3"]
+    let score = 0
+    for (let i=0; i < resultsMatch.length; i++){
+        if (resultsMatch [i][0] > resultsMatch[i][2]){
+            score +=3
+        } else if (resultsMatch[i][0] === resultsMatch[i][2]) {
+            score += 1
+        }
+        }
+        return score
+    }
   
-  
+  console.log("EXO30")
+  console.log(scoreMatch())
   
   
   
